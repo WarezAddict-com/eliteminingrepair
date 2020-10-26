@@ -1,0 +1,24 @@
+
+    <nav class="navbar sticky-bottom navbar-dark navbar-expand" id="bottomNav">
+        <div class="container">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <p class="navbar-text" data-aos-offset="0" data-aos="zoom-in">Copyright &copy {{ "now"|date("Y") }}<br>Elite Mining Repair, LLC</p>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="backToTop">
+                    <a href="#" class="nav-link" id="scroll" data-aos-offset="0" data-aos="zoom-in"><i class="fas fa-arrow-up" style="color: #F19822 !important;"></i> Back To Top</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    {# Debug Mode #}
+    {% if debugMode == 'yes' %}
+        <div class="spacer"></div>
+        <div class="container" id="debug">
+            {{ dump() }}
+        </div>
+        <div class="spacer"></div>
+    {% endif %}

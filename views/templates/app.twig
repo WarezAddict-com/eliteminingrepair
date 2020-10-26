@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Elite Mining Repair - {% block title %}{% endblock %}</title>
+
+        {# analytics #}
+
+        <meta name="title" content="Elite Mining Repair">
+        <meta name="description" content="The mining industry axle repair specialists. Axles for scoops, coal haulers, shield haulers, mantrips, locomotives, etc. We do other mechanical repairs on mining equipment and components including transmissions, tram drives, planetaries, wheel units, and a lot more">
+        <meta name="keywords" content="elite, coal, mining, repair, rebuild, equipment, axle, underground, scoop, buggy, mantrip, surface, gears, transmission, locomotives, mechanical, machinery, tram, planetaries">
+
+        <meta name="copyright" content="EliteMiningRepair.com">
+        <meta name="author" content="EliteMiningRepair.com">
+        <meta name="language" content="English">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="Elite Mining Repair">
+        <meta name="application-name" content="Elite Mining Repair">
+        <meta name="theme-color" content="#F19822">
+        <meta name="msapplication-tap-highlight" content="no">
+
+        <meta name="robots" content="index, follow">
+        <meta name="revisit-after" content="1">
+
+        <meta property="og:title" content="Elite Mining Repair">
+        <meta property="og:image" content="{{ BaseUrl }}/images/eliteminingrepair.jpg">
+        <meta property="og:url" content="{{ BaseUrl }}">
+        <meta property="og:site_name" content="Elite Mining Repair">
+        <meta property="og:description" content="The mining industry axle repair specialists. Axles for scoops, coal haulers, shield haulers, mantrips, locomotives, etc. We do other mechanical repairs on mining equipment and components including transmissions, tram drives, planetaries, wheel units, and a lot more">
+
+        <link rel="shortcut icon" href="{{ BaseUrl }}/favicon.ico">
+
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+        <script src="{{ BaseUrl }}/js/jquery.min.js"></script>
+        <link rel="stylesheet" href="{{ BaseUrl }}/css/all.min.css">
+        <script src="{{ BaseUrl }}/js/loadingoverlay.js"></script>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+
+        <link rel="stylesheet" href="{{ BaseUrl }}/css/bootstrap.min.css">
+        <script src="{{ BaseUrl }}/js/bootstrap.bundle.min.js"></script>
+
+        <link rel="stylesheet" href="{{ BaseUrl }}/css/aos.css">
+
+    </head>
+    <body class="loading" data-spy="scroll" data-target="#topNav" data-offset="175">
+
+        <script>
+            $.LoadingOverlaySetup({
+                background: 'rgba(255, 255, 255, 0.75)',
+                image: '',
+                fontawesome: 'fas fa-2x fa-cog fa-spin',
+                fontawesomeAutoResize: false,
+                fontawesomeColor: '#F19722',
+            });
+            $.LoadingOverlay('show');
+        </script>
+
+        {% include "templates/partials/navbar.twig" %}
+
+        {% include "templates/partials/slideshow.twig" %}
+
+        {% include "templates/partials/flash.twig" %}
+
+        {% block content %}{% endblock %}
+
+        {% include "templates/partials/footer.twig" %}
+
+        <link rel="stylesheet" href="{{ BaseUrl }}/css/animate.min.css">
+        <script src="{{ BaseUrl }}/js/jquery.easing.min.js"></script>
+        <script src="{{ BaseUrl }}/js/aos.js"></script>
+
+        <script src="{{ BaseUrl }}/js/jquery.validate.min.js"></script>
+        <script src="{{ BaseUrl }}/js/additional-methods.min.js"></script>
+
+        <link rel="stylesheet" href="{{ BaseUrl }}/slick/slick.css">
+        <link rel="stylesheet" href="{{ BaseUrl }}/slick/slick-theme.css">
+        <script src="{{ BaseUrl }}/slick/slick.min.js"></script>
+
+        <script src="{{ BaseUrl }}/js/all.min.js"></script>
+
+        <link rel="stylesheet" href="{{ BaseUrl }}/css/main.css">
+        <script src="{{ BaseUrl }}/js/custom.js"></script>
+
+    </body>
+</html>
