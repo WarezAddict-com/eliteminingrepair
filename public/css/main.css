@@ -241,6 +241,8 @@ p.navbar-text {
 }
 
 .card-img {
+  width: 100%;
+  height: auto !important;
   max-width: 300px !important;
   max-height: 225px !important;
   border: 0px !important;
