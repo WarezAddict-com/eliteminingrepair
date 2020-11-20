@@ -13,32 +13,18 @@ class GoogleAnalytics extends \Elite\Middleware\Middleware
 
     public function __invoke(Request $request, Response $response, $next)
     {
+        // Google Analytics ID
         $gAnal = getenv('G_ANALYTICS');
 
-        // Add Global
-        $this->container->view->getEnvironment()->addGlobal(
-            // Name
-            "analytics",
-            // Content
-            "<script>
-            (function(i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function() {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-            ga('create', '" . $gAnal . "', 'auto');
-            ga('send', 'pageview');
-            </script>"
-        );
+        // Global Google {{ analytics }}
+        $this->container->view->getEnvironment()->addGlobal("analytics", "<script async 
+src='https://www.googletagmanager.com/gtag/js?id=".$gAnal."'></script> <script> 
+window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} 
+gtag('js', new Date()); gtag('config', '".$gAnal."'); </script>");
 
-        // Return
+        // Return Response
         $response = $next($request, $response);
         return $response;
     }
+
 }

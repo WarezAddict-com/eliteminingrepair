@@ -1,9 +1,3 @@
-User-Agent: MJ12bot
-Disallow: /css/
-Disallow: /images/
-Disallow: /js/
-Crawl-Delay: 6
-
 User-agent: *
 Disallow: /css/
 Disallow: /images/

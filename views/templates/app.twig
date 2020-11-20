@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        {# Google Analytics #}
+        {{ analytics }}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>Elite Mining Repair - {% block title %}{% endblock %}</title>
-
-        {# analytics #}
 
         <meta name="title" content="Elite Mining Repair">
         <meta name="description" content="The mining industry axle repair specialists. Axles for scoops, coal haulers, shield haulers, mantrips, locomotives, etc. We do other mechanical repairs on mining equipment and components including transmissions, tram drives, planetaries, wheel units, and a lot more">
@@ -78,7 +78,6 @@
         <script src="{{ BaseUrl }}/slick/slick.min.js"></script>
         <script src="{{ BaseUrl }}/js/all.min.js"></script>
 
-        <!-- CUSTOM CSS JS -->
         <link rel="stylesheet" href="{{ BaseUrl }}/css/main.css">
         <script src="{{ BaseUrl }}/js/custom.js"></script>
 

@@ -1,13 +1,10 @@
 <?php
 
-// Define Dirs
+// Defines Directories
 define('WEB_ROOT', __DIR__);
-define('APP_ROOT', dirname(__DIR__));
-// GoDaddy APP_ROOT Fix
-// Comment out APP_ROOT above!
-// define('APP_ROOT', dirname(__DIR__) . '/elite-mining');
+define('APP_ROOT', dirname(__DIR__) . '/eliteminingrepair');
 
-// Autoload
+// Composer Autoload
 require_once APP_ROOT . '/vendor/autoload.php';
 
 // PHP Dev Server
@@ -18,20 +15,20 @@ if (PHP_SAPI == 'cli-server') {
     }
 }
 
-// Load ENV
+// Load .env File
 $dotenv = \Dotenv\Dotenv::create(APP_ROOT);
 $dotenv->load();
 
 // Set Default Timezone
 date_default_timezone_set(getenv('APP_TIMEZONE'));
 
-// If No Session, Start It
-if ('' == session_id()) {
+// Start Session If Not Started
+if (session_id() == '') {
     session_start();
 }
 
 // Slim Framework Settings
-$settings = include_once APP_ROOT . '/src/settings.php';
+$settings = require_once APP_ROOT . '/src/settings.php';
 
 // Init Slim Framework
 $app = new \Slim\App($settings);
